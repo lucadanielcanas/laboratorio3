@@ -1,8 +1,13 @@
 package com.pelado.lukson;
 
+/*
 import com.pelado.lukson.ejercicio1.Rectangle;
 import com.pelado.lukson.ejercicio2.Employee;
 import com.pelado.lukson.ejercicio3.Sale;
+import com.pelado.lukson.ejercicio4.BankAccount;
+*/
+import com.pelado.lukson.ejercicio5.Hour;
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,9 +15,11 @@ public class Main {
     {
         //exercise1();
         //exercise2();
-        exercise3();
+        //exercise3();
+        //exercise4();
+        exercise5();
     }
-
+    /*
     private static void exercise1()
     {
         Rectangle rectangle = new Rectangle(2.0, 4.0);
@@ -64,10 +71,29 @@ public class Main {
     }
     private static void exercise4()
     {
+        double money, deposit, debit;
 
+        BankAccount bankAccount = new BankAccount(2138, "Pelado Lukson", 190000);
+        Scanner sc = new Scanner(System.in);
+        bankAccount.BankAccountData();
+
+        System.out.println("Ingrese su deposito: \n");
+        deposit = sc.nextDouble();
+        money = bankAccount.credit(deposit);
+
+        System.out.println("Su dinero ahora es: " + money + "\n");
+
+        System.out.println("Ingrese monto a debitar: \n");
+        debit = sc.nextDouble();
+        money = bankAccount.debit(debit);
+
+        System.out.println("Su dinero ahora es: " + money + "\n");
     }
+     */
     private static void exercise5()
     {
-
+        Hour hour = new Hour();
+        String moment = hour.toString();
+        System.out.println(moment);
     }
 }
